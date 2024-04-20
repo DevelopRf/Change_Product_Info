@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+
+    .modal {
+        display: none;
+        position: absolute;
+        inset: 0;
+        z-index: 99;
+        background-color: #0000009a;
+
+        form {
+            position: relative;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            width: 500px;
+            padding: 40px 20px;
+            background-color: #fff;
+
+            label {
+                padding: 0 0 0 15px;
+                display: inline-block;
+            }
+
+            input {
+                margin: 6px 0;
+
+                &[type='text'] {
+                    font-size: 16px;
+                    display: block;
+                    width: 100%;
+                    border: 1px solid #cacaca;
+                    border-radius: 6px;
+                    padding: 10px 15px;
+
+                }
+
+                &[type='color'] {
+                    visibility: hidden;
+                }
+
+            }
+
+            .colorContent {
+
+                label {
+                    &:nth-child(2) {
+                        display: block;
+                        margin: 5px 0 0;
+
+                        .colorChange {
+                            width: 50px;
+                            height: 10px;
+                            border-radius: 15px;
+                        }
+                    }
+                }
+
+
+            }
+
+            .btn {
+                text-align: right;
+
+                button {
+                    
+                    
+                    padding: 6px 15px;
+                    border-radius: 6px;
+                    border: none;
+                    letter-spacing: 1px;
+                    &:nth-child(1)
+                    {
+                        background-color: #ff0000;
+                        color: #770000;
+                    }
+                    &:nth-child(2)
+                    {
+                        background-color: #129e12;
+                        color: lime;
+                    }
+                   
+
+                }
+            }
+
+            span {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                color: red;
+                font-size: 16px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

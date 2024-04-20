@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+body .modal {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6039215686);
+}
+body .modal form {
+  position: relative;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  width: 500px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+body .modal form label {
+  padding: 0 0 0 15px;
+  display: inline-block;
+}
+body .modal form input {
+  margin: 6px 0;
+}
+body .modal form input[type=text] {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  border: 1px solid #cacaca;
+  border-radius: 6px;
+  padding: 10px 15px;
+}
+body .modal form input[type=color] {
+  visibility: hidden;
+}
+body .modal form .colorContent label:nth-child(2) {
+  display: block;
+  margin: 5px 0 0;
+}
+body .modal form .colorContent label:nth-child(2) .colorChange {
+  width: 50px;
+  height: 10px;
+  border-radius: 15px;
+}
+body .modal form .btn {
+  text-align: right;
+}
+body .modal form .btn button {
+  padding: 6px 15px;
+  border-radius: 6px;
+  border: none;
+  letter-spacing: 1px;
+}
+body .modal form .btn button:nth-child(1) {
+  background-color: #ff0000;
+  color: #770000;
+}
+body .modal form .btn button:nth-child(2) {
+  background-color: #129e12;
+  color: lime;
+}
+body .modal form span {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: red;
+  font-size: 16px;
+}
+body .modal form span:hover {
+  cursor: pointer;
+}
+
+.products {
+  padding: 100px 0;
+}
+.products .container {
+  max-width: 1300px;
+  margin: auto;
+}
+.products .container .cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 481px) {
+  .products .container .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 769px) {
+  .products .container .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1025px) {
+  .products .container .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.products .container .cards .card {
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.6s;
+}
+.products .container .cards .card .productInfo h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.products .container .cards .card .productInfo .priceContent {
+  display: flex;
+  justify-content: space-between;
+}
+.products .container .cards .card .productInfo .priceContent .priceInfo p {
+  font-size: 14px;
+}
+.products .container .cards .card .productInfo .priceContent .priceInfo h3 {
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+}
+.products .container .cards .card .productInfo .priceContent .priceInfo span {
+  font-size: 18px;
+  font-weight: 600;
+}
+.products .container .cards .card .productInfo .priceContent .colorContent {
+  border-left: 1px solid;
+  padding: 0 0 0 20px;
+}
+.products .container .cards .card .productInfo .priceContent .colorContent p {
+  font-size: 14px;
+}
+.products .container .cards .card .productInfo .priceContent .colorContent .colorProduct {
+  margin: 2px 0 0;
+  border-radius: 10px;
+  width: 40px;
+  height: 15px;
+}
+.products .container .cards .card .edit {
+  margin: 10px 0 0;
+  text-align: right;
+}
+.products .container .cards .card .edit .btnEdit {
+  position: relative;
+  width: 120px;
+  height: 30px;
+  bottom: 0;
+  border: 1px solid #c7c7c7;
+  transition: 0.5s;
+}
+.products .container .cards .card .edit .btnEdit::after {
+  content: "\f4ca";
+  font-family: "Bootstrap-icons";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+.products .container .cards .card .edit .btnEdit:hover {
+  color: #ff9100;
+  border-color: #ff9100;
+  cursor: pointer;
+}
+.products .container .cards .card:hover {
+  box-shadow: 0 0 10px rgb(133, 133, 133);
+}/*# sourceMappingURL=style.css.map */
